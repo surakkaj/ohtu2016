@@ -1,11 +1,13 @@
 package ohtuesimerkki;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PlayerReader {
+public class PlayerReader implements Reader {
 
     private Scanner scanner;
 
@@ -16,6 +18,15 @@ public class PlayerReader {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public PlayerReader() throws FileNotFoundException{
+        File file = new File("players.txt");
+        
+        scanner = new Scanner(file);
+        System.out.println(scanner.nextLine());
+    }
+    public void setTestPath(){
+        scanner = new Scanner("players.txt");
     }
 
     public List<Player> getPlayers() {
