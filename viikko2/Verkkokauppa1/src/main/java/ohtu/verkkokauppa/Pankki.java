@@ -1,6 +1,6 @@
 package ohtu.verkkokauppa;
 
-public class Pankki {
+public class Pankki extends Singleton {
 
     private static Pankki instanssi;
 

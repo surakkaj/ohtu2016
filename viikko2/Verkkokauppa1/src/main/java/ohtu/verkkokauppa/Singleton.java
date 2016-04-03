@@ -9,6 +9,19 @@ package ohtu.verkkokauppa;
  *
  * @author Daniel Viktor Isaac
  */
-public interface Singleton {
+public class Singleton {
+    
+     static Singleton firstInstance = new Singleton();
+    
+    public Singleton() { 
+    
+    };
+    
+    public static Singleton getInstance(){
+        if(firstInstance == null){
+            firstInstance = new Singleton();
+        }
+        return firstInstance;
+    }
     
 }
