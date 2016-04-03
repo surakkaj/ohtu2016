@@ -1,5 +1,9 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Kauppa extends Singleton {
 
     private Varasto varasto;
@@ -24,7 +28,7 @@ public class Kauppa extends Singleton {
 //        viitegeneraattori = (Viitegeneraattori) vg;
 //        kaupanTili = "33333-44455";
 //    }
-
+    @Autowired
     public Kauppa(Varasto v, Pankki p, Viitegeneraattori vg) {
         varasto = v;
         pankki = p;
