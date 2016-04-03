@@ -2,23 +2,20 @@ package ohtu.verkkokauppa;
 
 import java.util.*;
 
-public class Varasto extends Singleton {
+public class Varasto  {
 
-    private static Varasto instanssi;
-
-    public static Varasto getInstance() {
-        if (instanssi == null) {
-            instanssi = new Varasto();
-        }
-
-        return instanssi;
-    }
     
     private Kirjanpito kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
     
     public Varasto() {
-        kirjanpito = Kirjanpito.getInstance();
+        kirjanpito = new Kirjanpito();
+        saldot = new HashMap<Tuote, Integer>();
+        alustaTuotteet();
+    }
+
+    public Varasto(Kirjanpito k) {
+        kirjanpito = k;
         saldot = new HashMap<Tuote, Integer>();
         alustaTuotteet();
     }

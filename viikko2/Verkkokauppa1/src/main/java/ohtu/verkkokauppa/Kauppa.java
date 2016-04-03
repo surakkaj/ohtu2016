@@ -18,10 +18,17 @@ public class Kauppa extends Singleton {
 //        viitegeneraattori = Viitegeneraattori.getInstance();
 //        kaupanTili = "33333-44455";
 //    }
-    public Kauppa(Singleton v, Singleton p, Singleton vg) {
-        varasto = (Varasto) v;
-        pankki = (Pankki) p;
-        viitegeneraattori = (Viitegeneraattori) vg;
+//    public Kauppa(Singleton v, Singleton p, Singleton vg) {
+//        varasto = (Varasto) v;
+//        pankki = (Pankki) p;
+//        viitegeneraattori = (Viitegeneraattori) vg;
+//        kaupanTili = "33333-44455";
+//    }
+
+    public Kauppa(Varasto v, Pankki p, Viitegeneraattori vg) {
+        varasto = v;
+        pankki = p;
+        viitegeneraattori = vg;
         kaupanTili = "33333-44455";
     }
 

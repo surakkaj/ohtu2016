@@ -3,16 +3,8 @@ package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
 
-public class Kirjanpito extends Singleton{
-    private static Kirjanpito instance;
-    
-    public static Kirjanpito getInstance() {
-        if ( instance==null) {
-            instance = new Kirjanpito();
-        }
-        
-        return instance;
-    }
+public class Kirjanpito {
+
     
     private ArrayList<String> tapahtumat;
 
